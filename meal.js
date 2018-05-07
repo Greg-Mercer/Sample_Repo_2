@@ -17,8 +17,11 @@ class Meal {
 
 	static mealList = [];    
 
+
+
 	function start() {
-		mealList.push(new Meal);
+		mealList.push(new Meal(
+			));
 	}
 
 

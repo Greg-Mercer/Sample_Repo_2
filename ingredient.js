@@ -1,14 +1,17 @@
 class Ingredients {
+	var name;		//name of the food
 	var generic; 	//food type generic for recipes
+	var faded;		//var if faded icons in menu
 	var price;		//price per unit of the ingredient
 	var decayrate;  //decay rate per ingredient
 	var maxHealth;  //max health of ingredient
 	var health;     //current health of ingredient
 	var nutrition;  //nutritional value of ingredient
 	var id;         //ingredient ID
-	constructor(name, generic, price, decayrate, maxHealth, health, nutrition, id){
+	constructor(name, generic, faded, price, decayrate, maxHealth, health, nutrition, id){
 		this.name = name;
 		this.generic = generic;
+		this.faded = faded;
 		this.price = price;
 		this.decayrate = decayrate;
 		this.maxHealth = maxHealth;
