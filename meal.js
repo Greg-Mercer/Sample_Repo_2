@@ -1,4 +1,5 @@
 class Meal {
+	var name;            //name of the meal
 	var known;           //static boolean var if recipe is known
 	var ingredients[];   //array of ingredients needed
 	var amount[];        //array to check player has right amount of ingredients
@@ -7,7 +8,8 @@ class Meal {
 	var nutrition; 		 //nutritional value of meal
 	var id;
 
-	constructor(false, ingredients, amount, tier){
+	constructor(name, false, ingredients,s amount, tier){
+		this.name = name;
 		this.known = false;
 		this.ingredients = ingredients;
 		this.amount = amount;
@@ -15,13 +17,12 @@ class Meal {
 		this.nutrition = sumNutrition(ingredients, amount);
 	};
 
-	static mealList = [];    
-
+	static list = [];    
 
 
 	function start() {
-		mealList.push(new Meal(
-			));
+		list.push(new Meal("Stir Fry", false, ingredient, amount, tier));
+		list.push(new Meal("BLT", false, ingreidient, amount, tier));
 	}
 
 
@@ -32,28 +33,17 @@ class Meal {
 		}
 		return nutri;
 	}
-}
+};
 
 
 
-class Kebab extends Meal {
-	constructor() {
-		super();
-		this.known = false;
-		this.ingredients = [2, 1, 3];
-		this.amount = [1, 1, 1];
-		this.nutrition = ;
-		this.tier = 1;
-	}
-}
-
-class Stirfry extends Meal {
-	constructor() {
-		super();
-		this.known = false;
-		this.ingredients = [VEGGIE, MEAT];
-		this.amount = [2, 1];
-		this.nutrition = ;
-		this.tier = 2;
-	}
-}
+// class Kebab extends Meal {
+// 	constructor() {
+// 		super();
+// 		this.known = false;
+// 		this.ingredients = [2, 1, 3];
+// 		this.amount = [1, 1, 1];
+// 		this.nutrition = ;
+// 		this.tier = 1;
+// 	}
+// }

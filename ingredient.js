@@ -1,5 +1,5 @@
 class Ingredients {
-	var name;		//name of the food
+	var name;		//name of the ingredient
 	var generic; 	//food type generic for recipes
 	var faded;		//var if faded icons in menu
 	var price;		//price per unit of the ingredient
@@ -29,83 +29,30 @@ class Ingredients {
 	static list = [];
 
 	function start(){
-		list.push(new Ingredient("Apple", "FRUIT", 0.60, 1.00, 100, 100, 100, 0));
-		list.push(new Ingredient("Bread", "CARB", 2.80, 1.00, 100, 100, 100, 1));
-		list.push(new Ingredient("Broccoli", "VEGGIE" 3.50, 1.00, 100, 100, 100, 2));
-		list.push(new Ingredient("Carrot", "VEGGIE", 2.20, 1.00, 100, 100, 100, 3));
+		list.push(new Ingredient("Apple", "PRODUCE", false, 0.60, 1.00, 100, 100, 100, 0));
+		list.push(new Ingredient("Lettuce", "PRODUCE", false, 0.60, 1.00, 100, 100, 100, 1));
+		list.push(new Ingredient("Tomato", "PRODUCE", false, 0.60, 1.00, 100, 100, 100, 2));
+		list.push(new Ingredient("Broccoli", "PRODUCE", false 3.50, 1.00, 100, 100, 100, 3));
+		list.push(new Ingredient("Carrot", "PRODUCE", false, 2.20, 1.00, 100, 100, 100, 4));
+
+		list.push(new Ingredient("Bacon", "MEAT", false, 2.80, 1.00, 100, 100, 100, 5));
+		list.push(new Ingredient("Chicken", "MEAT", false, 2.80, 1.00, 100, 100, 100, 6));
+
+		list.push(new Ingredient("Bread", "GRAIN", false, 2.80, 1.00, 100, 100, 100, 7));
+		list.push(new Ingredient("Noodles", "GRAIN", false, 2.80, 1.00, 100, 100, 100, 8));
 	}
 
-	static function newApple("FRUIT", 0.60, 1.00, 100, 100, 100, 1){
-		return new Ingredient();
-	}
-}
-
-class Apple extends ingredients {
-	constructor() {
-		super();
-		this.generic = "FRUIT";
-		this.price = 0.60;
-		this.decayrate = 1.00;
-		this.maxHealth = 100;
-		this.health = 100;
-		this.nutrition = 100;
-		this.id = 1;
-	}
 };
 
-class Bread extends ingredients {
-	constructor() {
-		super();
-		this.generic = "CARB"
-		this.price = 2.80;
-		this.decayrate = 1.00;
-		this.maxHealth = 100;
-		this.health = 100;
-		this.nutrition = 100;
-		this.id = 1;
-	}
-};
-
-
-class Broccoli extends ingredients {
-	constructor() {
-		super();
-		this.generic = "VEGGIE"
-		this.price = 3.50;
-		this.decayrate = 1.00;
-		this.maxHealth = 100;
-		this.health = 100;
-		this.nutrition = 100;
-		this.id = 1;
-	}
-};
-
-
-
-class Cheese extends ingredients {
-	constructor() {
-		super();
-		this.generic = "PROTEIN"
-		this.price = 2.60;
-		this.decayrate = 1.00;
-		this.maxHealth = 100;
-		this.health = 100;
-		this.nutrition = 100;
-		this.id = 1;
-	}
-};
-
-
-
-class Carrot extends ingredients {
-	constructor() {
-		super();
-		this.generic = "VEGGIE"
-		this.price = 2.20;
-		this.decayrate = 1.00;
-		this.maxHealth = 100;
-		this.health = 100;
-		this.nutrition = 100;
-		this.id = 1;
-	}
-};
+// class Carrot extends ingredients {
+// 	constructor() {
+// 		super();
+// 		this.generic = "VEGGIE"
+// 		this.price = 2.20;
+// 		this.decayrate = 1.00;
+// 		this.maxHealth = 100;
+// 		this.health = 100;
+// 		this.nutrition = 100;
+// 		this.id = 1;
+// 	}
+// };
