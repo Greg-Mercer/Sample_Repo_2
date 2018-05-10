@@ -8,7 +8,18 @@ class Meal {
 	var nutrition; 		 //nutritional value of meal
 	var id;
 
-	constructor(name, false, ingredients,s amount, tier){
+// 	Basically, every ingredient has "tags" with a certain value
+// 	 each (how much of that kind of ingredient it is). 
+// 	 For example, morsels are 0.5 "meat", full meat is 1 "meat",
+// 	  monster meat is 1 "meat" and 1 "monster".
+
+// When the crockpot finishes cooking, it checks all recipes 
+// to see if they are possible. The possible recipes are sorted
+// by priority. Should there be several top priority recipes, 
+// it chooses randomly (weighted, using weights given by the individual recipes).
+
+
+	constructor(name, false, ingredients, amount, tier){
 		this.name = name;
 		this.known = false;
 		this.ingredients = ingredients;
@@ -21,9 +32,11 @@ class Meal {
 
 
 	function start() {
+		
 		list.push(new Meal("Stir Fry", false, ingredient, amount, tier));
 		list.push(new Meal("BLT", false, ingreidient, amount, tier));
 	}
+
 
 
 	function sumNutrition(ingredients, amount) {
@@ -34,6 +47,7 @@ class Meal {
 		return nutri;
 	}
 };
+
 
 
 
